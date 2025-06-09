@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Generator Wpisów</title>
+</head>
+<body>
+  <h2>Generator Wpisów</h2>
+  <button onclick="generatePost()">Wygeneruj wpis</button>
+  <p id="result"></p>
+
+  <script>
+    const templates = [
+      "Dziś świetny dzień na {działanie}!",
+      "Nie zapomnij o {zadanie} – to ważne!",
+      "Jak się czujesz po {wydarzenie}?",
+      "Przypomnienie: {rzecz do zrobienia}",
+      "Nowy dzień – nowe możliwości. Czas na {plan}!",
+      "Masz tylko jedno życie – {motywacja}!",
+      "Czy próbowałeś dziś {czynność}?",
+      "Odwaga to {definicja odwagi}.",
+      "Codzienna inspiracja: {cytat}.",
+      "Pamiętaj: {przypomnienie}.",
+      "Ustal dziś priorytety: {lista rzeczy}.",
+      "Nie szukaj wymówek, tylko {działaj}!",
+      "Dziel się dobrem – {pomysł na pomoc}.",
+      "Twoja myśl na dziś: {myśl}.",
+      "Zainspiruj się: {nazwa książki / filmu}.",
+      "Działaj mimo strachu – {przykład}.",
+      "Zacznij dzień od {działanie poranne}.",
+      "Uśmiechnij się do {osoba / rzecz}.",
+      "Zrób dziś coś nowego: {pomysł}.",
+      "Czas na reset: {sposób na relaks}."
+    ];
+
+    function generatePost() {
+      const randomIndex = Math.floor(Math.random() * templates.length);
+      const result = templates[randomIndex];
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>
